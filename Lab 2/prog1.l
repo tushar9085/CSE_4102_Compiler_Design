@@ -18,6 +18,7 @@ digit [0-9]
 "EEE" {printf("%s -> Dept\n",yytext);}
 "18" {printf("%s -> Series\n",yytext);}
 "19" {printf("%s -> Series\n",yytext);}
+[0-9] {printf("%s -> Number\n",yytext);}
 [0-9][0-9] {printf("%s -> Two Digit\n",yytext);}
 ({letter}|{undr})({letter}|{undr}|{digit})* {printf("%s -> Identifyer\n",yytext);/*Identifyer rules */}
 " " {}

@@ -371,8 +371,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 14
-#define YY_END_OF_BUFFER 15
+#define YY_NUM_RULES 15
+#define YY_END_OF_BUFFER 16
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -382,9 +382,9 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[35] =
     {   0,
-        0,    0,   15,   13,   14,   12,   13,   13,   11,   11,
-       11,    1,   11,   11,   10,    8,    9,   11,   11,   11,
-       11,   11,   11,   11,    6,    7,    2,   11,   11,   11,
+        0,    0,   16,   14,   15,   13,   10,   10,   12,   12,
+       12,    1,   12,   12,   11,    8,    9,   12,   12,   12,
+       12,   12,   12,   12,    6,    7,    2,   12,   12,   12,
         5,    4,    3,    0
     } ;
 
@@ -802,29 +802,34 @@ YY_RULE_SETUP
 case 10:
 YY_RULE_SETUP
 #line 21 "prog1.l"
-{printf("%s -> Two Digit\n",yytext);}
+{printf("%s -> Number\n",yytext);}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 22 "prog1.l"
-{printf("%s -> Identifyer\n",yytext);/*Identifyer rules */}
+{printf("%s -> Two Digit\n",yytext);}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 23 "prog1.l"
-{}
+{printf("%s -> Identifyer\n",yytext);/*Identifyer rules */}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 24 "prog1.l"
-{printf("%s -> Unknown\n",yytext);/*It means else part*/}
+{}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 25 "prog1.l"
+{printf("%s -> Unknown\n",yytext);/*It means else part*/}
+	YY_BREAK
+case 15:
+YY_RULE_SETUP
+#line 26 "prog1.l"
 ECHO;
 	YY_BREAK
-#line 828 "lex.yy.c"
+#line 833 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1822,7 +1827,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 25 "prog1.l"
+#line 26 "prog1.l"
 
 
 
