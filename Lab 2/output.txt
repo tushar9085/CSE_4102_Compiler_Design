@@ -1,0 +1,4 @@
+I -> Noun
+ Eat -> Verb
+ Rice -> Object
+Parsing Finished
