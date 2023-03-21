@@ -4,6 +4,10 @@
 
 %}
 
+letter [A-Za-z]
+undr [_]
+digit [0-9]
+
 %%
 "I" {printf("%s -> Noun\n",yytext);/*Rules 'I EAT RICE' I is a NOUN----This thing should be compact, there will no space or enter!*/}
 "Eat" {printf("%s -> Verb\n",yytext);}
@@ -15,7 +19,7 @@
 "18" {printf("%s -> Series\n",yytext);}
 "19" {printf("%s -> Series\n",yytext);}
 [0-9][0-9] {printf("%s -> Two Digit\n",yytext);}
-([A-Z|a-z|_])([A-Z|a-z|_|0-9|_])* {printf("%s -> Identifyer\n",yytext);/*Identifyer rules */}
+({letter}|{undr})({letter}|{undr}|{digit})* {printf("%s -> Identifyer\n",yytext);/*Identifyer rules */}
 " " {}
 . {printf("%s -> Unknown\n",yytext);/*It means else part*/}
 %%
