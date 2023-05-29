@@ -1,0 +1,8 @@
+1. in lexer, add the tokens, dim, a- ID, AS , integer
+2. in parser, add the token in token section and in code section write the code formate wrt token
+3. run make
+
+if dim a as integer 
+   dim b as integer thake
+
+tahole, recursivity use korte hobe parser.y e 

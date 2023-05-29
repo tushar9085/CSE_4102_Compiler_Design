@@ -823,7 +823,7 @@ YY_RULE_SETUP
 case 8:
 YY_RULE_SETUP
 #line 34 "lexer.l"
-{ printf("%s -> ADDOP\n", yytext); return ADDOP; }
+{ return ADDOP; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
@@ -833,7 +833,7 @@ YY_RULE_SETUP
 case 10:
 YY_RULE_SETUP
 #line 36 "lexer.l"
-{ printf("%s -> MULOP\n", yytext);return MULOP; }
+{ return MULOP; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP

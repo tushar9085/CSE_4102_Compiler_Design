@@ -15,7 +15,6 @@
 %token FCONST
 %token CCONST
 %token DIM AS INTEGER
-%token FOR NEXT TO
 
 %left LT GT /*LT GT has lowest precedence*/
 %left ADDOP 
@@ -25,8 +24,8 @@
 %start code
 
 %%
-code: code ADDOP term | term;
-term: term MULOP ICONST| ICONST;
+code: code statement {printf("code: code statement\n")}|statement {printf("statement\n")}
+statement: DIM ID AS INTEGER {printf("statement: DIM ID AS INTEGER\n")}
 %%
 
 void yyerror ()

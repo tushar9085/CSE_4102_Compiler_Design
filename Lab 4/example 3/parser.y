@@ -25,8 +25,8 @@
 %start code
 
 %%
-code: code ADDOP term | term;
-term: term MULOP ICONST| ICONST;
+code: code statement| ;
+statement: DIM ID AS INTEGER|FOR ID ASSIGN ICONST TO ICONST code NEXT ID;
 %%
 
 void yyerror ()

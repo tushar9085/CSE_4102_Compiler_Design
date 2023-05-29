@@ -1,1 +1,6 @@
-int -> INTa -> ID; -> SEMIParsing finished!
+1 -> ICONST
++ -> ADDOP
+2 -> ICONST
+* -> MULOP
+3 -> ICONST
+Parsing finished!

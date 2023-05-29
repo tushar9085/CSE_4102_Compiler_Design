@@ -66,10 +66,7 @@
      CCONST = 283,
      DIM = 284,
      AS = 285,
-     INTEGER = 286,
-     FOR = 287,
-     NEXT = 288,
-     TO = 289
+     INTEGER = 286
    };
 #endif
 

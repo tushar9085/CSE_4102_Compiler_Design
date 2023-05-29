@@ -1,3 +1,1 @@
-1. in lexer.l, type the printf line according to the input 
-2. in parser.y, type the code section
-3. run make
+This is for 1+2

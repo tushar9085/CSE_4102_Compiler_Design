@@ -31,9 +31,9 @@ CCONST    (\'{print}\')
 "if"		{return IF;}
 "else"		{return ELSE;}
 
-"+"       { printf("%s -> ADDOP\n", yytext); return ADDOP; }
+"+"       { return ADDOP; }
 "-"       { return SUBOP; }
-"*"       { printf("%s -> MULOP\n", yytext);return MULOP; }
+"*"       { return MULOP; }
 "/"       { return DIVOP; }
 "=="      { return EQUOP; }
 ">"       { return GT; }

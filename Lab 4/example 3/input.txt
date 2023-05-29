@@ -1,0 +1,8 @@
+dim A as integer
+dim B as integer
+
+for i=1 to 20
+    for j=2 to 40
+        dim C as integer
+    next j
+next i

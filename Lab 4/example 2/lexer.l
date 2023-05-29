@@ -26,14 +26,13 @@ CCONST    (\'{print}\')
 "int"       { printf("%s -> INT\n", yytext); return INT; }
 "double"    { return DOUBLE; }
 "char"		{ return CHAR; }
-"for"       { printf("%s -> FOR\n", yytext); return FOR; }
 
 "if"		{return IF;}
 "else"		{return ELSE;}
 
-"+"       { printf("%s -> ADDOP\n", yytext); return ADDOP; }
+"+"       { return ADDOP; }
 "-"       { return SUBOP; }
-"*"       { printf("%s -> MULOP\n", yytext);return MULOP; }
+"*"       { return MULOP; }
 "/"       { return DIVOP; }
 "=="      { return EQUOP; }
 ">"       { return GT; }
@@ -44,16 +43,14 @@ CCONST    (\'{print}\')
 "{"       { return LBRACE; }
 "}"       { return RBRACE; }
 ";"       { printf("%s -> SEMI\n", yytext); return SEMI; }
-"="       { printf("%s -> ASSIGN\n", yytext); return ASSIGN; }
+"="       { return ASSIGN; }
 
 "dim"       	{ printf("%s -> DIM\n", yytext); return DIM; }
 "as"       		{ printf("%s -> AS\n", yytext); return AS; }
 "integer"       { printf("%s -> INTEGER\n", yytext); return INTEGER; }
-"to"       { printf("%s -> TO\n", yytext); return TO; }
-"next"       { printf("%s -> NEXT\n", yytext); return NEXT; }
 
 {ID}        {printf("%s -> ID\n", yytext); return ID;}
-{ICONST}    {printf("%s -> ICONST\n", yytext); return ICONST;}
+{ICONST}    {return ICONST;}
 {FCONST}    {return FCONST;}
 {CCONST}    {return CCONST;}
 

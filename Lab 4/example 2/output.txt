@@ -1,0 +1,13 @@
+dim -> DIM
+A -> ID
+as -> AS
+integer -> INTEGER
+statement: DIM ID AS INTEGER
+statement
+dim -> DIM
+B -> ID
+as -> AS
+integer -> INTEGER
+statement: DIM ID AS INTEGER
+code: code statement
+Parsing finished!
