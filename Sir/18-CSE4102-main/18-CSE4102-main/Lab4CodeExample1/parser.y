@@ -22,11 +22,12 @@
 %left MULOP /*MULOP has lowest precedence*/
 
 
-%start code
+%start expr
 
 %%
-code: code ADDOP term | term;
-term: term MULOP ICONST| ICONST;
+expr: expr ADDOP expr
+		|expr MULOP expr
+		|ICONST
 %%
 
 void yyerror ()
