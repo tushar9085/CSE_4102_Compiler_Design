@@ -1,0 +1,7 @@
+# Forntend of Compiler
+
+Lexical
+Syntax
+Semantic
+
+In today's lab, we will learn the first two.
